@@ -1,0 +1,47 @@
+h1 {
+	color:blue;
+	font-family: 'BenchNine', sans-serif;
+	text-align: center;
+}
+
+.head1{
+	color:pink;
+}
+
+body {
+	background-image: url("Backgrounds/grey_bg.jpg");
+	background-repeat: repeat-x;
+}
+.headings{
+	list-style: none;
+	margin: 10px;
+	text-align: center;
+	font-weight: bolder;
+}
+ul{
+	background-color: black;
+	color: blue;
+}
+.headings li{
+	display: inline-block;
+	padding: 20px;
+}
+
+#current_section{
+	background-color: white
+}
+
+#image_div{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+img.circ_img{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: 3px
+  padding:2px;
+}
