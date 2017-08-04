@@ -1,0 +1,67 @@
+h1 {
+	color:#463127;
+	font-family: 'BenchNine', sans-serif;
+	text-align: center;
+
+}
+
+p{
+	margin: 6px;
+}
+
+body {
+	/*font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  	*/
+  	color: #6d4c3d;
+  	background-color: #cac8c5;
+  	font-family: Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+.headings{
+	list-style: none;
+	text-align: center;
+	font-weight: bolder;
+}
+.content{
+	margin: 20px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.content li{
+	padding: 5px;
+}
+.headings ul{
+	font-size: 20px;
+	font-weight:300; 
+	background-color: #66635B;
+	color: #A59E8C;
+	font-family: "Courier New", Courier, monospace;
+}
+.headings li{
+	display: inline-block;
+	padding: 10px;
+}
+
+#current_section{
+	background-color: #131211
+
+}
+
+#image_div{
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+img.circ_img{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  padding:2px;
+}
