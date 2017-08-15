@@ -7,15 +7,15 @@ body {
     background-color: #fbfccf;
 }
 
-#main_header{
+#main_header {
     text-align: center;
     vertical-align: center;
-    padding-top: 5px;
-
+    padding: 5px;
 }
-h1{
-    color: #fd7060;
-    }
+
+h1 {
+    color:cornsilk;
+}
 
 main {
     background-color: cornsilk;
@@ -26,7 +26,48 @@ main {
 main section {
     background-color: #fdd8d3;
     margin-top: 2px;
-    width: 28cm;
+    width: 26.3cm;
+    margin-bottom: 0.5cm;
+    padding-right: 1px;
+}
+
+
+/* Add a black background color to the top navigation */
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    display: block;
+    color:cornsilk;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
 main section article {
@@ -36,53 +77,101 @@ main section article {
 
 header {
     background-color: #102542;
-
-
 }
 
 .article-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     padding: 5px;
-    /* width: 30%; */
-    height: 200px;
-    display: inline-block;
+    width: 35%;
+    height: 300px;
+    display: inline-table;
     color: black;
+    align-self: top;
+    margin: 5px;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    ;
 }
 
-section header{
+.col-card {
+    width: 23%;
+    float: right;
+    padding-right: 1px;
+    margin: 1px;
+}
+
+.col-card .article-card {
+    width: 2.5cm;
+}
+
+section header {
     color: white;
+    padding: 2px;
+    padding-left: 7px;
 }
 
-.article-col {
+aside {
+    height: 33.8cm;
+    width: 7cm;
+    background-color: #333;
+    margin-right: 3px;
+    margin-left: 20px;
+    margin-top: 3px;
+    float: right;
+    left: 28cm;
+}
+
+aside nav {
+    margin: 5px;
+}
+
+.article-head {
+    padding: 3px;
+    background-color: grey
+}
+
+
+/* #border{
+    display: inline;
+    width: 30%;
+    padding: 3px;
+    border: solid;  
+}
+
+#border .article-card{
+    height: 90%;
+} */
+
+
+/* .article-card .col-card {
+    display: inline-table;
+    height: 75%;
+} */
+
+
+/* .col-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     padding: 5px;
     /* width: 30%; */
-    height: 200px;
-}
 
-aside {
-    height: 30.8cm;
-    width: 5cm;
-    background-color: green;
-    margin-right: 3px;
-    margin-left: 20px;
-    margin-top: 6px;
-    float: right;
-    left: 31cm;
-}
 
-aside nav {
-    margin: 30px;
-}
+/*  height: 200px;
+    display: inline-block;
+    color: black;
+} */
 
-.article-head {
-    background-color: grey
-}
 
-.article-col .article-card {
+/* 
+.col-card{
+    padding: 10px;
+    display: inline-block;
+} */
+
+
+/* .col-card .article-card {
     width: 50px;
     height: 50px;
     background-color: pink;
-}
+} */

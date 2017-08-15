@@ -10,27 +10,43 @@
 </head>
 
 <body>
+    <!-- Magazine Title -->
     <header id="main_header">
         <h1 align="center">Magazine ABC </h1>
-        <hr>
     </header>
+    <!-- Inserting a navigation bar -->
+    <div class="topnav" id="myTopnav">
+        <a href="#national">National News</a>
+        <a href="#international">International News</a>
+        <a href="#entertainment">Entertainment News</a>
+    </div>
+
+    <!-- Advertisements section -->
     <aside>
         <nav>
-            <div id="campaign_div">
-                SOme text in aise
+            <div>
+                <a href= "https://color.adobe.com/Campfire-color-theme-2528696/">
+                <img src="ad_image.jpg" width=99.3% height=400>
+                </a>
             </div>
-            <div id="promo">
-                SOme promo here
+            <div id="promo" style="overflow:auto; background-color:cornsilk">
+                    <div class="change-embed-petition" data-petition-id="4466756"></div>
+                    <script src="https://static.change.org/product/embeds/v1/change-embeds.js" type="text/javascript"></script>            
             </div>
         </nav>
     </aside>
 
+    <!-- The main section begins here  -->
     <main>
+        <!-- National news section -->
         <section class="news_sections">
             <header>
-                <h2>National News</h2>
+                
+                <h2 id="national">National News</h2>
             </header>
+            <hr>
             <article class="article-card">
+                
                 <div class="article-head">
                     Lorem ipsum dolor
                 </div>
@@ -52,6 +68,7 @@
                     eos qui
                 </div>
             </article>
+
             <article class="col-card">
                 <article class="article-card">
                     <div class="article-head">
@@ -70,12 +87,13 @@
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                     </div>
                 </article>
-
             </article>
         </section>
+
+        <!-- International news section -->
         <section class="news_sections">
             <header>
-                <h2>International News</h2>
+                <h2 id="international">International News</h2>
             </header>
             <hr>
             <article class="article-card">
@@ -118,13 +136,13 @@
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                     </div>
                 </article>
-
             </article>
-
         </section>
+
+        <!-- Entertainment News section -->
         <section class="news_sections">
             <header>
-                <h2>Entertainment News</h2>
+                <h2 id="entertainment">Entertainment News</h2>
             </header>
             <hr>
             <article class="article-card">
