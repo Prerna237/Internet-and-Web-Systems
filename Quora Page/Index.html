@@ -10,15 +10,17 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-  <title>Document</title>
+  <title>IQuora</title>
 </head>
 
-<body>
-
+<body >
+<script>
+	alert("Click on a topic from your topics to get started!");
+</script>
   <header id="head_with_bg">
-    <img src="res/logo.svg" alt="company_logo">
+    <img src="res/logo.svg" alt="company_logo" style="margin-left:5px;">
     <div class="topnav" id="myTopnav">
-      <a href="#home" >Trending</a>
+      <a href="#home">Trending</a>
       <a href="#news">Featured</a>
       <a href="#contact">Surprise Me!</a>
     </div>
@@ -38,9 +40,9 @@
         <a href="#"><i class="fa fa-facebook"></i></a>
       </div>
     </div>
-<header style="border-top:1px solid grey;border-bottom:1px solid grey;padding-left:8px;padding-top:1px;padding-bottom:1px">
-  <h1 style="padding-left:2px">My Topics</h1>
-</header>
+    <header style="border-top:1px solid grey;border-bottom:1px solid grey;padding-left:8px;padding-top:1px;padding-bottom:1px">
+      <h1 style="padding-left:2px">My Topics</h1>
+    </header>
     <!-- These are the list of favorite topics -->
     <div class="tab">
       <button class="tablinks" onclick="openCity(event, 'London')"> <i class="material-icons">desktop_mac</i>Computer Science</button>
@@ -51,23 +53,27 @@
   </aside>
 
 
-  <section style="width:75%;background-color:pink" id="questions_panel">
-    <article id="London" class="tabcontent">
-      
+  <section style="width:75%;" id="questions_panel">
+    <article id="London" class="tabcontent" class="active">
+
       <!-- Sub topic chips -->
       <button class="chip">
-            <img src="res/avatar.png" alt="Person" width="96" height="96">
-            John Doe
+              <img src="res/ai.jpeg" alt="Person" width="96" height="94">
+              Artificial Intelligence
+          </button>
+      <button class="chip">
+            <img src="res/graph.png" alt="Person" width="96" height="94">
+            Graph Theory
         </button>
-        <button class="chip">
-          <img src="res/avatar.png" alt="Person" width="96" height="96">
-          John Doe
-      </button>
+      <button class="chip">
+          <img src="res/cloud.png" alt="Person" width="96" height="94">
+          Cloud Computation
+      </button><br>
 
-    <!-- Question Cards -->
+      <!-- Question Cards -->
       <article class="question">
         <article class="question-head">
-          How does Alan Turing's research help?
+          Is this question 1?
         </article>
         <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
@@ -76,20 +82,20 @@
         </article>
       </article>
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this question 2
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
         </article>
       </article>
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this Question 3?
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
@@ -98,31 +104,45 @@
     </article>
 
     <article id="Paris" class="tabcontent">
+      <!-- Sub topic chips -->
+      <button class="chip">
+          <img src="res/work.jpg" alt="Person" width="96" height="94">
+          Workouts
+      </button>
+      <button class="chip">
+        <img src="res/diet.png" alt="Person" width="96" height="94">
+        Diet Programs
+    </button>
+      <button class="chip">
+      <img src="res/supp.jpeg" alt="Person" width="96" height="94">
+      Supplements
+  </button>
+      <!-- Question Cards -->
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this question 1?
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
         </article>
       </article>
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this question 2
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
         </article>
       </article>
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this Question 3?
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
@@ -131,31 +151,45 @@
     </article>
 
     <article id="Tokyo" class="tabcontent">
+      <!-- Sub topic chips -->
+            <button class="chip">
+                <img src="res/heels.png" alt="Person" width="96" height="94">
+                Runway News
+                    </button>
+            <button class="chip">
+              <img src="res/cloth.png" alt="Person" width="96" height="94">
+              Season's Collections
+          </button>
+            <button class="chip">
+            <img src="res/makeup.jpg" alt="Person" width="96" height="94">
+            Makeup Trends
+            </button>
+            <!-- Question Cards -->
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this question 1?
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
         </article>
       </article>
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this question 2
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
         </article>
       </article>
       <article class="question">
-        <article class="article-head">
-          Lorem ipsum dolor
+        <article class="question-head">
+          Is this Question 3?
         </article>
-        <article class="article-body">
+        <article class="question-body">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
           penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
           eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate
@@ -167,9 +201,11 @@
   <script>
     var tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-      console.log("i="+i);
+      console.log("i=" + i);
       tabcontent[i].style.display = "none";
+
     }
+    
   </script>
 </body>
 

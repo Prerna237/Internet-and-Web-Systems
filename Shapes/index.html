@@ -11,19 +11,46 @@
 </head>
 
 <body>
+    <script>
+    hell();
+    </script>
     <p>
         <form>
             <label>Select a shape</label>
-            <input type="radio" name="shape" id="circle_rb" value="circle" checked="checked" />
+            <input type="radio" name="shape" id="circle_rb" onclick="javascript:drawShape('circle')" checked="checked" />
             <label for="circle_rb">Circle</label>
-            <input type="radio" name="shape" id="square_rb" value="square" />
-            <label for="sizeMed">Square</label>
-            <input type="radio" name="shape" name="radSize" id="sizeLarge" value="large" />
-            <label for="sizeLarge">large</label>
+            <input type="radio" name="shape" id="triangle_rb" onclick="javascript:drawShape('triangle')" checked="checked" />
+            <label for="triangle_rb">Triangle</label>
+            <input type="radio" name="shape" id="square_rb" onclick="javascript:drawShape('square')" checked="checked" />
+            <label for="square_rb">Square</label>
+            <input type="radio" name="shape" id="rectangle_rb" onclick="javascript:drawShape('rectangle')" checked="checked" />
+            <label for="rectangle_rb">Rectangle</label>
+            <input type="radio" name="shape" id="hex_rb" onclick="javascript:drawShape('hex')" checked="checked" />
+            <label for="hex_rb">Hexagon</label>
+            <br>
+
+            <!-- Canvas Space -->
+            <canvas id="myCanvas" width="200" height="200" style="margin:1cm;border:1px solid #000000;">
+            </canvas>
+
+            <!-- Parameter fields -->
+            <p class="fields_label" id="circle">Enter Radius: <input type="number" class="fields" id="circle_radius" onblur="javascript:circleArea(this.value)"><br></p>
+            <p class="fields_label" id="base">Enter Base: <input type="number" class="fields" id="base_val"><br></p>
+            <p class="fields_label" id="height">Enter Height: <input type="number" id="height_val" class="fields"><br></p>
+            <p class="fields_label" id="side">Enter Side Length: <input type="number" id="side_val" class="fields"><br></p>
+            <p class="fields_label" id="width">Enter Width: <input type="number" id="width_val" class="fields"><br></p>
+
+            <script>
+                init()
+            </script>
+            <button type="button" onclick="javascript:submitted()">Click Me</button>
+            
+            <article id="result">
+            </article>
+
         </form>
     </p>
-    <script src="script.js"></script>
-    
+
 </body>
 
 </html>
