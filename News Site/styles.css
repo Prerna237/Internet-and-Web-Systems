@@ -120,8 +120,11 @@ aside {
     margin-top: 3px;
     float: right;
     left: 28cm;
+    padding-top: 1.75cm;
 }
-
+#adImage{
+    margin-bottom:2cm;
+}
 aside nav {
     margin: 5px;
 }
@@ -130,7 +133,9 @@ aside nav {
     padding: 3px;
     background-color: grey
 }
-
+#promo{
+    margin-top: 2.1cm; 
+}
 
 /* #border{
     display: inline;
