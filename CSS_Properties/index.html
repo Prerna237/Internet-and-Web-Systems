@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+
+<body style="margin:0.2cm">
+    <div class="navbar-brand container-fluid" style="display:block;font-size:3rem;line-height:5rem;color:#fff;text-align:center;cursor:default;background-color:#563d7c;"> Common CSS Tags</div>
+    <div style="width:80%;margin:1cm;" id="content">
+        <button type="button" id="1" class="btn btn-secondary" onclick="reply_click(this.id,'These tags are used to set the height and width of the container respectively and the values can be given in cm/mm/rem or percentage to name a few.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                Height and Width
+              </button>
+
+        <button type="button" id="2" class="btn btn-secondary" onclick="reply_click(this.id,'This tag is used to set the color of the text in the container where values can be either rgb or hex values.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Color
+              </button>
+        <button type="button" id="3" class="btn btn-secondary" onclick="reply_click(this.id,'This tag is used to set the background color of the element where the values can be set either in rgb values or using the hex values.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                      Background-Color
+                    </button>
+
+        <button type="button" id="4" class="btn btn-secondary" onclick="reply_click(this.id,'Sets some space around the the container and the values can be specified in cm,rem,px or percentage. The direction of the margin can be specified as margin-top')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                  Margin
+                                </button>
+        <button type="button" id="5" class="btn btn-secondary" onclick="reply_click(this.id,'Aligns the container or element to the direction specified i.e., float-right moves the container to the right of the screen')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                              Float
+                                            </button>
+        <button type="button" id="6" class="btn btn-secondary" onclick="reply_click(this.id,'Controls how the elements are aligned, especially in lists. Has many display options like in-line, block, flex, grid,etc')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                                  Display
+                                                                                </button>
+        <button type="button" id="7" class="btn btn-secondary" onclick="reply_click(this.id,'Sets a shodow in a block like fashion around the element. Teh width and opacity of the shadow can be specified.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                                                                      Block-Shadow
+                                                                                                                    </button>
+        <button type="button" id="8" class="btn btn-secondary" onclick="reply_click(this.id,'Sets how radius of the curve of the border')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">        Border-radius</button>
+
+        <button type="button" id="9" class="btn btn-secondary" onclick="reply_click(this.id,'Sets the amount of time the elemt takes to appear or on the screen or for a particular animation transition to be performed in secs.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                              Transition              </button>
+
+        <button type="button" id="10" class="btn btn-secondary" onclick="reply_click(this.id,'Sets the size of the text font and can be specified in cm/rem/px or percentage.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                                Font-Size              </button>
+        <button type="button" id="10" class="btn btn-secondary" onclick="reply_click(this.id,'Used to draw a border line around the element. The style, color and width of the border can be specified.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                                                                  Border              </button>
+        <button type="button" id="11" class="btn btn-secondary" onclick="reply_click(this.id,'Specifies the nature of positioning used. The attributes can be absolute, relative, sticky,etc')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                                                                                                    Position              </button>
+
+        <button type="button" id="12" class="btn btn-secondary" onclick="reply_click(this.id,'Determines what should be done when the width of the content inside exceed the size of the parent. Possible options are scroll, hidden, ellipse, etc')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                                                                                                                                      Overflow              </button>
+
+        <button type="button" id="13" class="btn btn-secondary" onclick="reply_click(this.id,'Determines if the text should be normal, underlined or italisized.')"
+            data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                                                                                                                                                                                                                                                                                                                                                Text-decoration              </button>
+
+    </div>
+    <script type="text/javascript">
+        function reply_click(clicked_id, text) {
+            el = document.getElementById(clicked_id)
+            el.setAttribute("data-content", text)
+        }
+    </script>
+</body>
+
+</html>

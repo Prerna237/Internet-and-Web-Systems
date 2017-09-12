@@ -1,0 +1,27 @@
+.col-sm { border: 1px solid ; margin:2px; }
+
+.card{border: 0 solid transparent;}
+
+.card-img-top{height: 11rem}
+
+a {
+color: #660066;
+padding: 3rem;
+}
+.carousel-item img{
+    height:20rem;
+    width:15rem;
+}
+
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+.carousel-inner img{
+    margin: auto;
+}
+.navbar-brand{
+    height: 5rem;
+    border-bottom: 1px solid black;
+
+}

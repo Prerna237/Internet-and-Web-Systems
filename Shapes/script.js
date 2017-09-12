@@ -108,6 +108,7 @@ function init()
 
 function submitted(){
     rs=document.getElementById('result');
+    
     if(shape_global==='circle')
         {
             rs.innerHTML="\n Perimeter of "+shape_global+"="+(2*Math.PI*radius_field.value)+'\n'+"Area of"+shape_global+"="+(radius_field.value*radius_field.value*Math.PI);

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.2/css/mdb.min.css"> -->
+    <script src="script.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+            $('.carousel').carousel()
+        })
+
+        var totalAmt = 0;
+        var selected_items=[]
+        var cost_items=[]
+    </script>
+
+    <title>Shop at Bagdown</title>
+</head>
+
+<body>
+    <!-- Top Banner with the cart icon -->
+    <nav class="navbar-brand container-fluid">
+
+        <img src="res/icon.png" width="60" height="60" class="align-top" alt="">
+        <br\>
+            <span class="align-text-middle text-left" style="height:70;font-size:3rem;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">BagDown</span>
+
+            <button class="navbar-toggler" type="button" onclick="javascript:putAmount(cost_items)" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-label="Toggle navigation" style="float:right;">
+            <img src="res/cart.png" width="60" height="60" alt="" srcset="" >
+          </button>
+    </nav>
+
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h4 class="text-white">Total Amount of the cart</h4>
+            <span class="text-muted" id="total"></span>
+            <br\>
+            <button onclick="javascript:loadPage()">Generate Bill</button>
+            <!-- <button onclick="document.location.href='bill.html';">Generate Bill</button> -->
+        </div>
+    </div>
+
+    <!-- Showcase of items -->
+
+    <div id="carouselExampleIndicators" class="carousel slide mt-2 pt-2 pb-3 mb-3" data-interval='1000' data-ride="carousel" style="border-bottom:1px solid black">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img class="d-block img-fluid" src="res/camera1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="res/bino.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block img-fluid" src="res/uhd_tv.jpg" alt="Third slide">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Actual list of items -->
+    <div id="accordion">
+        <!-- To set the heading for the card -->
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <a data-toggle="collapse" data-content="Hello ji" href="#collapseOne" aria-controls="collapseOne">
+                    Electronics and Accessories
+                  </a>
+                </h5>
+            </div>
+
+            <!-- Body of the card containing individual items -->
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/32_inch_tv.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">32 Inch TV</h4>
+                                    <p class="card-text">The PowerSeeker telescope is an ideal tool for new astronomers. It has a good combination
+                                        of quality, value and power. You can enjoy star gazing all year round with your family
+                                        and friends. You will find the telescope affordable and can be easily carried wherever
+                                        you want.
+                                    </p>
+
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'32-Inch TV',26000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 32,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/camera1.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Sony Shoot</h4>
+                                    <p class="card-text">The PowerSeeker telescope is an ideal tool for new astronomers. It has a good combination
+                                        of quality, value and power. You can enjoy star gazing all year round with your family
+                                        and friends. You will find the telescope affordable and can be easily carried wherever
+                                        you want.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'Sony Shoot Camera',32000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 16,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/smart_tv.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Smart Television</h4>
+                                    <p class="card-text">The PowerSeeker telescope is an ideal tool for new astronomers. It has a good combination
+                                        of quality, value and power. You can enjoy star gazing all year round with your family
+                                        and friends. You will find the telescope affordable and can be easily carried wherever
+                                        you want.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'Smart TV',16000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/bino.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">PowerSeeker</h4>
+                                    <p class="card-text">The PowerSeeker telescope is an ideal tool for new astronomers. It has a good combination
+                                        of quality, value and power. You can enjoy star gazing all year round with your family
+                                        and friends. You will find the telescope affordable and can be easily carried wherever
+                                        you want.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'PowerSeeker',32600)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/uhd_tv.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">UHD Television</h4>
+                                    <p class="card-text">The PowerSeeker telescope is an ideal tool for new astronomers. It has a good combination
+                                        of quality, value and power. You can enjoy star gazing all year round with your family
+                                        and friends. You will find the telescope affordable and can be easily carried wherever
+                                        you want.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'UHD TV',38000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    Eau de Parfum
+                  </a>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume1.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabian Nights Ekoz</h4>
+                                    <p class="card-text">Introduced in 2003. Fragrance notes: a fresh bouquet of soft, white flowers. Recommended
+                                        use: evening.
+                                    </p>
+
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'Arabian Nights Perfume',5800)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Titan Fragrances </h4>
+                                    <p class="card-text">A very modern, joyful and feminine fragrance from the floral family From the very first
+                                        notes, this fragrance reveals a playful floral nectar heart of exotic white flowers
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'Titan Frangrance',3000)" class="btn btn-primary">Add to Cart</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Guess Girl Eau De Parfum</h4>
+                                    <p class="card-text">A very modern, joyful and feminine fragrance from the floral family From the very first
+                                        notes, this fragrance reveals a playful floral nectar heart of exotic white flowers
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'Guess Parfum',2000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Celestron PowerSeeker</h4>
+                                    <p class="card-text">The PowerSeeker telescope is an ideal tool for new astronomers. It has a good combination
+                                        of quality, value and power. You can enjoy star gazing all year round with your family
+                                        and friends. You will find the telescope affordable and can be easily carried wherever
+                                        you want.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'Celestron',32000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume5.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">UHD Perry Parfum</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'Perry Parfum',32000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Fancy Crystal Containers
+                  </a>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume1.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabian Nights Ekoz</h4>
+                                    <p class="card-text">Introduced in 2003. Fragrance notes: a fresh bouquet of soft, white flowers. Recommended
+                                        use: evening.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'UHD TV',38000)" class="btn btn-primary">Add to Cart</a>
+                                    imary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume2.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Titan Fragrances Women's Celeste</h4>
+                                    <p class="card-text">A very modern, joyful and feminine fragrance from the floral family From the very first
+                                        notes, this fragrance reveals a playful floral nectar heart of exotic white flowers
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'UHD TV',38000)" class="btn btn-primary">Add to Cart</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Guess Girl Eau De Parfum</h4>
+                                    <p class="card-text">A very modern, joyful and feminine fragrance from the floral family From the very first
+                                        notes, this fragrance reveals a playful floral nectar heart of exotic white flowers
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'32-Inch TV',32000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume4.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">Celestron PowerSeeker</h4>
+                                    <p class="card-text">The PowerSeeker telescope is an ideal tool for new astronomers. It has a good combination
+                                        of quality, value and power. You can enjoy star gazing all year round with your family
+                                        and friends. You will find the telescope affordable and can be easily carried wherever
+                                        you want.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'32-Inch TV',32000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Individual Item cards -->
+                        <div class="col-sm" data-toggle="popover" data-animation="true" data-html="true" data-content="Price: Rs. 26,000 <br/> GST: 25%">
+                            <div class="card py-3">
+                                <img class="card-img-top" src="res/perfume5.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title">UHD Perry Parfum</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                    <a onclick="javascript:addItem(selected_items,cost_items,'32-Inch TV',32000)" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

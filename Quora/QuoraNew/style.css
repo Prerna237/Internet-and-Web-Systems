@@ -1,0 +1,237 @@
+html, 
+body {
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin-top: 0px;
+    display: inline-block;
+}
+
+p {
+    margin: 2px;
+}
+
+i{
+    padding-right:2px; 
+}
+
+.profile_card {
+    /* float: left; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 5px;
+    height:30%;
+    width:95%;
+    margin-bottom: 6px;
+    align-items: center;
+}
+
+aside {
+    float: left;   
+    margin-top: 0px;
+    border-right: 1px solid;
+}
+
+aside div{
+    display: table;;
+}
+
+.container {
+    padding: 0;
+    height: 100%;
+    font-size: 100%;
+    width:50%;
+    margin:0 auto;
+    align-content: center;
+    align-items: center;
+    /* position: absolute; */
+}
+div.tab {
+    /* float: left; */
+    background-color:white;
+    width: 95%;
+    height: 300px;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 98%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    border-left:#CC2E2E 4px solid;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+    border-left:#CC2E2E 4px solid;
+}
+
+
+.container h1{
+    font-size:100%;
+    margin-bottom: 1px;
+}
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+article{
+    display: table;;
+}
+
+section{
+    display: inline-block;
+    
+}
+
+#questions_panel{
+    overflow: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin: 5px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover article:hover {
+    opacity: 0.8; 
+}
+
+#head_with_bg{
+    height: 2.7cm;
+    background-color:white;
+    /* display: inline; */
+    position: relative;
+    border-bottom: 1px solid grey;
+}
+
+#head_with_bg img{
+    width: 3.5cm;
+    height: 2.5cm;
+    position: absolute;
+}
+
+.topnav {
+    background-color:white;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1px;
+    left:8cm;
+    height:2.5 cm;
+    width: 70%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    margin-bottom: 5px;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    border-top:#CC2E2E 4px solid;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    color: white;
+}
+
+.question{
+    float: left;
+    padding: 4px;
+    border: 1px solid #6C6969;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.question-head{
+    width:100%;
+    padding: 2px;
+    border-bottom: #cc2e2e 1px solid;
+}
+
+.question-body{
+    padding: 2px;
+}
+
+.question:hover{
+    border-left: #cc2e2e 4px solid;
+}
+/* Style the tab content */
+.tabcontent {
+    float: right;
+    padding: 0px 12px;
+    width: 95%;
+    height: 300px;
+}   
+.tabcontent button{
+    display: inline-block;
+}
+
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    width: 30%;
+    line-height: 50px;
+    border-radius: 25px;
+    color: black;
+    border: 1px solid #cc2e2e;
+    background-color:white;
+}
+
+.chip:hover{
+    border: 3px solid #cc2e2e;
+}
+
+.chip img {
+    float: left;
+    margin: 1.5px 1px 1.5px 2px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
