@@ -1,8 +1,9 @@
 .col-sm { border: 1px solid ; margin:2px; }
 
-.card{border: 0 solid transparent;}
+.card{ border: 0 solid ;}
 
 .card-img-top{height: 11rem}
+
 
 a {
 color: #660066;
@@ -13,7 +14,14 @@ padding: 3rem;
     width:15rem;
 }
 
+.card-header{
+  background-color: white;
+  
+}
 
+.card-header:hover{
+    border-left:5px solid black;
+}
 .carousel-inner > .item > img {
     margin: 0 auto;
 }
@@ -25,3 +33,88 @@ padding: 3rem;
     border-bottom: 1px solid black;
 
 }
+
+.add_btn{
+  box-shadow: 7px 5px 4px rgba(0, 0, 0, .4);
+  padding: 4px;
+}
+
+.circle{
+  padding: 0;
+  z-index: 98;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background-color: grey;
+  display: flex;
+  transition: 0.2s;
+  text-align: center;
+}  
+  /* Rotate add icon  */
+.circle img{
+  margin: auto;
+  width: 30px;
+  height: 30px;
+}    
+&:hover{
+cursor: pointer;
+background-color: lighten(grey, 10%);
+-webkit-box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3);
+box-shadow: 0 8px 15px 0 rgba(0,0,0,0.3);
+}
+
+
+/* Material style */
+button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-size: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+    background: grey;
+  }
+  
+  /* Ripple magic */
+  button{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
+  
+  button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
+  

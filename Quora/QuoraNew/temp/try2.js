@@ -8,14 +8,19 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.height = "0";
     document.getElementById("main").style.marginTop = "0";
-} 
+}
 
 function myMap() {
     console.log("Called myMap")
+    var myCenter = new google.maps.LatLng(51.508742,-0.120850);
     var mapCanvas = document.getElementById("map");
-    var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.2),
-        zoom: 10
-    };
+    var mapOptions = {center: myCenter, zoom: 5};
     var map = new google.maps.Map(mapCanvas, mapOptions);
-} 
+    var marker = new google.maps.Marker({position:myCenter,animation:google.maps.Animation.BOUNCE});
+    marker.setMap(map);
+    
+}
+
+
+document.getElementById("mySidenav").style.width = "0";
+document.getElementById("main").style.marginLeft = "0";
