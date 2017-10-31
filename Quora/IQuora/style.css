@@ -188,6 +188,7 @@ button:hover, a:hover article:hover {
 
 .question-head{
     width:100%;
+    font-weight: 600;
     padding: 2px;
     border-bottom: #cc2e2e 1px solid;
 }
